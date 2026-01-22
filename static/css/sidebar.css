@@ -1,3 +1,5 @@
+/* base.css - Estilos para sidebar.html */
+
 * {
     margin: 0;
     padding: 0;
@@ -135,41 +137,7 @@ main {
     padding: 16px;
 }
 
-/* Masonry Grid */
-.grid {
-    column-count: 5;
-    column-gap: 16px;
-    padding: 8px;
-}
-
-.grid img {
-    width: 100%;
-    margin-bottom: 16px;
-    border-radius: 16px;
-    cursor: pointer;
-    transition: transform 0.2s, filter 0.2s;
-    break-inside: avoid;
-    display: block;
-}
-
-.grid img:hover {
-    transform: scale(0.98);
-    filter: brightness(0.95);
-}
-
 /* Responsive Design */
-@media (max-width: 1600px) {
-    .grid {
-        column-count: 4;
-    }
-}
-
-@media (max-width: 1200px) {
-    .grid {
-        column-count: 3;
-    }
-}
-
 @media (max-width: 800px) {
     sidebar {
         width: 60px;
@@ -183,17 +151,9 @@ main {
         margin-left: 60px;
         width: calc(100% - 60px);
     }
-    
-    .grid {
-        column-count: 2;
-    }
 }
 
 @media (max-width: 500px) {
-    .grid {
-        column-count: 1;
-    }
-    
     sidebar li {
         width: 40px;
         height: 40px;

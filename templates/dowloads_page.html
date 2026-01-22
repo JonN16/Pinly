@@ -1,0 +1,63 @@
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dowload.css') }}">
+{% endblock %}
+
+{% extends 'sidebar.html' %} {% block conteudo %}
+<div id="voltar">
+    <a href=""> <img src="" alt="botao de voltar para a pagina anterior"></a>
+</div>
+<div id="area da imagem">
+    <div id="sidebar da imagem">
+        <img src="" alt="curtir">
+        <h1>1,2mil<!-- quantidades de like--></h1>
+        <img src="" alt="comentarios">
+        <img src="" alt="compartilhar">
+        <button>Salvar</button>
+    </div>
+    <div id="imagem">
+        <img src="{{ url_for('static', filename='imagens/' + imagem) }}" alt="Imagem para download">
+    </div>
+    <div id="info_da_imagem">
+        <!-- Header com criador -->
+        <div class="creator-header">
+            <img src="" alt="logo do criador">
+            <h3>Endu</h3>
+        </div>
+
+        <!-- Seção de comentários -->
+        <div id="comentarios">
+            <div class="comments-header">
+                <h2>30 comentários</h2>
+                <button>
+                    <img src="" alt="expandir">
+                </button>
+            </div>
+
+            <div class="comments-list">
+                <div id="comentario">
+                    <img src="" alt="logo do primeiro comentario">
+                    <div class="comment-content">
+                        <p class="comment-author">Suoky</p>
+                        <h2>Guys is quackity?</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input de comentário -->
+            <div id="adicionar_comentario">
+                <input type="text" placeholder="Adicionar comentário">
+                <div class="comment-icons">
+                    <button><img src="" alt="emoji"></button>
+                    <button><img src="" alt="gif"></button>
+                    <button><img src="" alt="imagem"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid">
+    {% for img in imagens %}
+    <a href="/download/{{ img }}"><img src="{{ url_for('static', filename='imagens/' + img) }}"></a>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+
+    <sidebar>
+        <ul>
+            <li><img src="{{ url_for('static', filename='imagens/logo.png') }}" alt="logo"></li>
+            <li><img src="" alt="home"></li>
+            <li><img src="" alt="explorar"></li>
+            <li><img src="" alt="suas pastas"></li>
+            <li><img src="" alt="criar"></li>
+            <li><img src="" alt="atualizações"></li>
+            <li><img src="" alt="mensagens"></li>
+            <div>
+                <li><img src="" alt="configurações"></li>
+            </div>
+        </ul>
+    </sidebar>
+
+    <nav>
+        <input type="text" placeholder="Pesquisar">
+        <div>
+            <button></button>
+            <button></button>
+        </div>
+    </nav>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
